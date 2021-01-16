@@ -38,7 +38,7 @@ axios.get("/userdata").then(response=>{
         </div>
     </nav>
             <header className="masthead" >
-               <div className="masthead-subheading">Welcome to Easy!</div>
+               <div className="masthead-subheading">Welcome to EasyBanking!</div>
                <div className="masthead-heading">Your Bank at Your Fingertips</div>
               <Link className="btn btn-primary" to="/dashboard">Start</Link>
        </header>

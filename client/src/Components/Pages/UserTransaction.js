@@ -40,7 +40,7 @@ this.setState({
   }
 }
 componentDidMount(){
-  axios.get('https://easytransc.herokuapp.com//userdata')
+  axios.get('https://easytransc.herokuapp.com/userdata')
     .then(
         (result) => {
             this.setState({

@@ -1,14 +1,16 @@
 import React,{Component} from 'react';
-import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
+import { BrowserRouter as Router,Route} from 'react-router-dom';
 import Dashboard from './Components/Pages/Dashboard';
 import Home from './Components/Pages/Home';
-import PaymentRequest from './Components/Pages/PaymentRequest';
 import UserTransaction from './Components/Pages/UserTransaction';
+import TransferFund from './Components/Pages/TransferFund';
+import UserInfo from './Components/Pages/UserInfo';
+import TransactionDetails from './Components/Pages/TransactionDetails';
 
 class App extends Component{
   render(){
     return(
-      <Router>    
+      <Router>
       <Route
       path='/'
       exact={true}
@@ -24,13 +26,15 @@ class App extends Component{
      component={UserTransaction}
    />
    <Route
-     path='/payRequest'
-     component={PaymentRequest}
-   />
-   <Route
-     path='/userUpdate'
-     component={UserTransaction}
-   />
+     path='/transferFund'
+     component={TransferFund}
+    /> 
+    <Route
+    path='/userInfo'
+    component={UserInfo}/>
+    <Route
+    path='/transactionDetails'
+    component={TransactionDetails}/>
    </Router>
     );
   }

@@ -17,7 +17,7 @@ app.get('/',(req,res)=>{
 });
 //Endpoints
 app.route('/userdata').get(userController.listAllUsers).post(userController.createNewUser);
-app.route('/userdata/:userid').get(userController.readUser).put(userController.updateUser).delete(userController.deleteUser);
+app.route('/userdata/:_id').get(userController.readUser).put(userController.updateUser).delete(userController.deleteUser);
 app.listen(port, function() {
     console.log("Server is running on Port: " + port);
 });

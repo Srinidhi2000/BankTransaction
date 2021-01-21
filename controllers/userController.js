@@ -20,8 +20,8 @@ exports.createNewUser = (req, res) => {
   });
 };
 // read a perticular task by _id......
-exports.readUser = (req, body) => {
-  userdata.findById(req.params.taskid, (err, task) => {
+exports.readUser = (req, res) => {
+  userdata.findById(req.params._id, (err, task) => {
     if (err) {
       res.status(500).send(err);
     }
@@ -31,9 +31,10 @@ exports.readUser = (req, body) => {
 //Update a perticular task by _id ....
 exports.updateUser = (req, res) => {
   userdata.findOneAndUpdate(
-    { _id: req.params.taskid },
-    req.body,
-    { new: true },
+    { _id: req.params._id },
+    { $set:{balance:req.body.balance},
+      $push:{transactions:req.body.transactions}},
+    { upsert: true },
     (err, task) => {
       if (err) {
         res.status(500).send(err);
@@ -44,7 +45,7 @@ exports.updateUser = (req, res) => {
 };
 // Delete a perticular task by _id .....
 exports.deleteUser = (req, res) => {
-  userdata.remove({ _id: req.params.taskid }, (err, task) => {
+  userdata.remove({ _id: req.params._id }, (err, task) => {
     if (err) {
       res.status(404).send(err);
     }

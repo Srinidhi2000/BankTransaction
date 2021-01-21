@@ -10,7 +10,7 @@
     width: 100%;
     display: flex;
     position: fixed;
-    justify-content: start;
+    flex: start;
     align-items: center;
   }
   .menu-bars {
@@ -29,11 +29,27 @@
   }
   #PageTitle{
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 0.95rem;
-    color:antiquewhite;
+    font-size: 0.98rem;
+    color:#FFECB3;
+    display: flex;
     text-transform: uppercase;
-    margin-left: 200px;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
   }
+  li.nav-text a:hover {
+    background-color: #fec810;
+    border: #fec810;
+    color: white;
+    text-decoration: none;
+  }
+  li.nav-text a:focus, a.focus {
+    background-color: #ffee58;
+  }
+  li.nav-text a:active, a.active {
+    background-color: #ffee58;
+  }
+
   .nav-menu {
     background-color: #060b26;
     width: 250px;
@@ -53,7 +69,7 @@
   
   .nav-text {
     display: flex;
-    justify-content: start;
+   flex: start;
     align-items: center;
     padding: 8px 0px 8px 16px;
     list-style: none;
@@ -86,7 +102,7 @@
     width: 100%;
     height: 80px;
     display:flex;
-    justify-content:start;
+    flex:start;
     align-items: center;
   }
   

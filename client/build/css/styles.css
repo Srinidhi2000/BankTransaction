@@ -13,10 +13,11 @@ body {
   color: #212529;
   text-align: left;
   height: 100%;
+min-width: 600px;
 }
 
 div .homepage{
-  background-image: url(../assets/img/headerbg.jpg);
+  background-image: url(../assets/img/bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -37,6 +38,7 @@ header{
     line-height: 1.5rem;
     text-align: center;
     margin-bottom: 25px;
+    color:peru;
     margin-top: 6em ;
     font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -58,10 +60,63 @@ header.masthead .masthead-heading {
     font-size: 4.5rem;
     font-weight: 700;
     line-height: 4.5rem;
+    color: midnightblue;
     margin-bottom: 4rem;
   }
 }
+header.masthead a.btn.btn-primary{
+  padding-right: 3rem;
+  padding-left: 3rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-decoration: none;
+  font-size: 1rem;
+  background-color:midnightblue;
+}
+div.IntroCard.card{
+  width: 18rem;
+}
 
+div.IntroCard.card div.card-body {
+  padding-bottom: 0rem;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}
+div.numUsers{
+  color: #d81b60;
+  margin-bottom: 0;
+  padding-bottom:0;
+  
+}
+div.card-body a.btn.btn-primary{
+  text-decoration: none;
+}
+div.userNum{
+  padding-left: 0.5em;
+}
+
+.verticalLine{
+  border-right: 1px solid darkslategray;
+  height: 3rem;
+  padding-right:0.5rem ;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+div.verticalLine svg{
+  margin-top: 0.5em;
+}
+div.verticalLine a{
+  color: #880e4f;
+  font-size:1.1rem;
+text-decoration: none;
+margin-left: 8px;
+padding-top: 0.5em;
+
+}
+div.verticalLine a:hover{
+  color: #d81b60;
+}
 .btn{
   display: inline-block;
   font-weight: 700;
@@ -72,50 +127,39 @@ header.masthead .masthead-heading {
   text-decoration: none;
   border-radius: 0.25rem;
 }
-.btn-primary {
+a.btn-primary {
   background-color: #fed136;
+  border: #fec810;
+
 }
-.btn-primary:hover {
-  background-color: #fec810;
+a.btn-primary:hover {
+  background-color: #fada6f;
   text-decoration: underline;
 }
-.btn-primary:focus, .btn-primary.focus {
+a.btn-primary:focus, a.btn-primary.focus {
   background-color: #fec810;
 }
-.menubar{
-  display: none;
+a.btn:active,a.btn-primary:active, a.btn-primary.active {
+  background-color: #fec810;
 }
-.collapse ul{
-  list-style-type: none;
-  overflow: hidden;
-  background-color:transparent; 
-  padding-right: 8em;
-}
-.collapse li{
-  float: right;
-}
-
-.collapse li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-.navbar-nav{
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 1rem;
-    text-transform: uppercase;
-}
-.collapse li a:hover{
-  color: #fec810;
+a:visited{
+  background-color: #fec810;
 }
 .pageBody{
-display: flex;
 margin-left:250px;
+display: flex;
 justify-content: center;
-padding: 16px;
-padding-top: 96px;
+align-content: space-around;
+padding: 50px;
+padding-top: 130px; 
+}
+.align-start{
+  justify-content: flex-start;
+}
+#pageContent{
+  width:100%;
+  justify-content:center;
+ 
 }
 #users {
   text-align: center;
@@ -125,9 +169,12 @@ padding-top: 96px;
   justify-content: center;
   width: 90%;
 }
+table{
+  border-radius: 25px;
+}
 
 #users td, #users th {
-  border: 1px solid #ddd;
+  border-collapse:collapse;
   padding: 8px;
 }
 
@@ -139,8 +186,105 @@ padding-top: 96px;
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
-  background-color: #2196F3;
+  background-color: #d81b60;
   color: white;
 }
+button.btn.btn-primary {
+  background-color: #880e4f;
+border-color: #880e4f;
+}
+h1{
+  font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: #fec810 !important;
+  border-color:  #fec810 !important;
+}
+button.btn.btn-primary:hover {
+  background-color: #fec810;
+  border-color:  #fec810 
+}
+button.btn.btn-primary:focus {
+  background-color: #fec810;
+}
+button.btn.btn-primary:active{
+  background-color: #fec810;
+}
+button.btn.btn-primary:visited{
+  background-color: #fec810;
+}
+div.card {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* text-align: center; */
+}
+hr{
+  background-color: black;
+  height: 1;
+  border-color:black;
+  color:black;
+}
+.bold{
+  font-weight:600 ;
+}
+.form-group .form-control{
+  width: 35%;
+}
+.form-group{
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+#goback{
+  margin-left: 3em;
+  padding-inline: 2em;
+  background-color: #f20000;
+  border: red;
+  text-decoration-line: none;
+}
+#goback:hover,#goback:active,#goback:focus{
+  background-color: #fc3434 !important;
+}
+.card-title{
+display:flex;
+justify-content: flex-end;
+float: right;
+}
+.align-left{
+display:flex;
+justify-content: flex-start;
+float: left;
+width: 100%;
+font-style: italic;
+font-family: cursive;
+}
+#userInfo {
+  /* text-align: center; */
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  /* justify-content: center; */
+  width: 100%;
+}
 
+#userInfo td, #userInfo th {
+  border-collapse:collapse;
+  padding: 8px;
+}
 
+#userInfo tr:nth-child(even){background-color: #f2f2f2;}
+#userInfo tr{border-bottom: 2px solid #c5bcbc;}
+#userInfo tr:hover {background-color: #ddd;}
+
+#userInfo th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  color: white;
+}
+.transferFundTitle{
+  margin-bottom: 1em;
+  font-style: italic;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:darkslategray;
+}

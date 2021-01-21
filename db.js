@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const dbURI = 'mongodb+srv://SrinidhiSP:Srinidhi2000@cluster0.uecnp.mongodb.net/BankTransaction?retryWrites=true&w=majority';
+const dbURI = process.env.MONGODB_URI;
 const options = {
   reconnectTries: Number.MAX_VALUE,
   poolSize: 10

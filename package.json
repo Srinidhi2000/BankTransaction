@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "build": "cd client && npm run build",
-    "install-client":"cd client && npm install",
-    "heroku-postbuild":"npm run install-client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
     "start": "nodemon server.js"
   },
   "author": "",
@@ -15,8 +15,10 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "moment": "^2.29.1",
     "mongoose": "^5.11.12",
     "nodemon": "^2.0.7",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "react-moment": "^1.1.1"
   }
 }

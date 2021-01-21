@@ -5,9 +5,7 @@ import Home from './Components/Pages/Home';
 import UserTransaction from './Components/Pages/UserTransaction';
 import TransferFund from './Components/Pages/TransferFund';
 import UserInfo from './Components/Pages/UserInfo';
-//import TransactionDetails from './Components/Pages/TransactionDetails';
- const path=require('path');
-const  TransactionDetails = require(path.join(__dirname,'./Components/Pages/TransactionDetails'));
+import TransactionDetails from './Components/Pages/TransactionDetails';
 class App extends Component{
   render(){
     return(
